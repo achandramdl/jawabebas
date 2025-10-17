@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>{$lang->arcade} - {$game['name']}</title>
+{$headerinclude}
+	<script src="jscripts/ruffle/ruffle.js"></script>
+</head>
+<body>
+{$header}
+{$menu}
+<br />
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder" width="100%">
+	<tr>
+		<td colspan="2" class="thead"><strong>{$game['name']}</strong></td>
+	</tr>
+	<tr>
+		<td class="trow1" align="center">
+			{$guestmessage}
+			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" width="{$game['width']}" height="{$game['height']}">
+				<param name="movie" value="./arcade/swf/{$game['file']}.swf?ibpro_gameid={$game['gid']}" />
+				<param name="type" value="application/x-shockwave-flash" />
+				<param name="pluginspage" value="http://www.macromedia.com/go/getflashplayer/" />
+				<param name="bgcolor" value="#{$game['bgcolor']}" />
+				<param name="wmode" value="direct">
+				<param name="quality" value="high" />
+				<param name="menu" value="false" />
+				<param name="width" value="{$game['width']}" />
+				<param name="height" value="{$game['height']}" />
+				<embed src="./arcade/swf/{$game['file']}.swf?ibpro_gameid={$game['gid']}" wmode="direct" width="{$game['width']}" height="{$game['height']}" quality="high" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" menu="false"></embed>
+				<noembed>{$lang->flash_not_installed}</noembed>
+			</object>
+		</td>
+		<td class="trow1" valign="top" align="left" width="300">
+			<table border="0" cellpadding="5" width="100%">
+				<tr>
+					<td class="trow1" align="center">
+						<img src="arcade/largeimages/{$game['largeimage']}.gif" alt="{$game['name']}" title="{$game['name']}" />
+					</td>
+				</tr>
+				<tr>
+					<td class="trow2" align="center">
+						<img src="images/arcade/champ.png" alt="{$lang->champion}" title="{$lang->champion}" /><br />
+						<strong>{$champusername}</strong><br />
+						{$lang->current_champion}
+					</td>
+				</tr>
+				<tr>
+					<td class="trow1" align="center">
+						<strong>{$lang->your_high_score}</strong><br />
+						{$userbestscore}
+					</td>
+				</tr>
+				{$gamerating}
+				<tr>
+					<td class="trow1" align="center">
+						<a href="arcade.php">{$lang->back_to_arcade}</a><br />
+						<a href="arcade.php?action=scores&amp;gid={$game['gid']}">{$lang->view_high_scores}</a><br />
+						{$add_remove_favorite}
+					</td>
+				</tr>
+				<tr>
+					<td class="trow2" align="center">
+						<strong>{$lang->object_of_game}</strong><br />
+						{$game['about']}
+					</td>
+				</tr>
+				<tr>
+					<td class="trow1" align="center">
+						<strong>{$lang->keys}</strong><br />
+						{$game['controls']}
+					</td>
+				</tr>
+				{$tournaments}
+			</table>
+		</td>
+	</tr>
+</table>
+{$online}
+{$footer}
+</body>
+</html>
