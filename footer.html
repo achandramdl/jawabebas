@@ -1,0 +1,80 @@
+</main>
+
+<footer id="footer">
+	<div class="container">
+    <div class="row">
+		
+        <div class="col-sm-4 foot">
+			<h3>About</h3><br>
+			<p style="margin-right:25px">Welcome to {$mybb->settings['bbname']}. This bit of text can be changed in Footer Template of the theme.</p>
+			
+		</div>		
+		
+
+		<div class="col-sm-4 foot">
+			<h3>Important Links</h3><br>
+			<p>
+
+ 				<a href="{$mybb->settings['homeurl']}" class="btn btn-success" style="color: #fff;" data-toggle="tooltip" data-placement="bottom" data-original-title="{$lang->forumjump_home}"><i class="fa fa-home"></i></a>
+				
+				<a href="<archive_url>" class="btn btn-danger" style="color: #fff;" data-toggle="tooltip" data-placement="bottom" data-original-title="{$lang->bottomlinks_litemode}"><i class="fa fa-archive"></i></a>
+				
+				<a href="#" target="_blank" rel="noopener" class="btn btn-primary" style="color: #fff;" data-toggle="tooltip" data-placement="bottom" data-original-title="{$lang->theme_bootbb_footer_facebook}"><i class="fa fa-facebook-square"></i></a>
+				
+				<a href="#" target="_blank" rel="noopener" class="btn btn-info" style="color: #fff;" data-toggle="tooltip" data-placement="bottom" data-original-title="{$lang->theme_bootbb_footer_twitter}"><i class="fa fa-twitter"></i></a>
+				
+				<a href="{$mybb->settings['bburl']}/misc.php?action=syndication" class="btn btn-warning" style="color: #fff;" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="{$lang->bottomlinks_syndication}"><i class="fa fa-rss"></i></a>
+				<br/>
+				<a href="misc.php?action=markread&amp;my_post_key={$mybb->post_code}" class="btn btn-danger" style="color: #fff; margin-top:10px" data-toggle="tooltip" data-placement="bottom" data-original-title="{$lang->bottomlinks_markread}"><i class="fa fa-book"></i> {$lang->bottomlinks_markread}</a><br /><br />
+				
+				
+				</p>
+
+		</div>
+		
+		<div class="col-sm-4 foot">
+			
+			 <h3>Reach us</h3><br>
+			 
+<p><a href="{$mybb->settings['contactlink']}" class="btn btn-primary" style="color: #fff;" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact Us"><i class="fa fa-envelope"></i> {$lang->bottomlinks_contactus}</a>&nbsp;
+			
+			<a href="showteam.php" class="btn btn-danger" style="color: #fff;" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Meet Our Team"><i class="fa fa-users"></i> {$lang->bottomlinks_forumteam}</a></p>
+		</div>
+		
+		{$auto_dst_detection}
+		
+		<!-- The following piece of code allows MyBB to run scheduled tasks. DO NOT REMOVE -->{$task_image}<!-- End task image code -->
+
+</div></div>
+
+<div id="copyright">
+<div class="container">
+
+<div class="pull-left">
+<!-- MyBB is free software developed and maintained by a volunteer community.
+					It would be much appreciated by the MyBB Group if you left the full copyright and "powered by" notice intact,
+					to show your support for MyBB.  If you choose to remove or modify the copyright below,
+					you may be refused support on the MyBB Community Forums.
+
+					This is free software, support us and we'll support you. -->
+				{$lang->powered_by} <a href="http://www.mybb.com" target="_blank" rel="noopener" style="color: #fff;">MyBB{$mybbversion}</a>. Designed with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://tektove.com" target="_blank" rel="noopener" style="background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%)!important; padding:4px; border-radius:2px;color:#fff;font-weight:bold;">Tektove</a><!-- End powered by -->
+
+</div>
+</div>
+
+</div>
+<debugstuff>
+</footer>
+
+<!-- Fix for MentionMe popup window position -->
+<script type="text/javascript">
+	var MentionMe = (function(m) {
+	m.customSCEditorContainerOffset = {
+		left: 0,
+		top: 2,
+	};
+
+	return m;
+})(MentionMe || {});
+</script>
+<!-- End Fix for MentionMe popup window position -->
